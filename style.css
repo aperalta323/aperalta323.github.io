@@ -5,6 +5,10 @@
     --gap: 15px;
 }
 
+body {
+    background: linear-gradient(45deg, #dfdfdf, #165a9512);
+}
+
 main {
     margin: auto;
     max-width: 1200px;
@@ -29,6 +33,7 @@ h3 {
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 0.9em;
 }
 h4 {
     font-size: 1.5em;
@@ -46,13 +51,54 @@ a:focus {
 }
 hr {
     border-top: 1px solid #cdcdcd;
+    margin: calc(var(--gap) * 3) auto ;
+}
+img {
+    width: 100%;
+}
+label {
+    width: 100%;
+    display: block;
 }
 /*===== SECTIONS =====*/
+section {
+    margin-bottom: calc(var(--gap) * 20);
+    transition: all .5s ease;
+}
 #title-section {
     text-align: center;
+    margin: calc( var(--gap) * 10) auto;
 }
-section {
-    margin-bottom: calc(var(--gap) * 5);
+
+section:not(.show) {
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+
+/*===== FIGURES =====*/
+figure {
+    width: 80%;
+    margin: var(--gap) auto;
+}
+figcaption {
+    text-align: center;
+}
+
+/*===== UTIL =====*/
+.two-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+.text-center {
+    text-align: center;
 }
 
 /*===== MEDIA QUERIES =====*/
+@media screen and (max-width: 768px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
