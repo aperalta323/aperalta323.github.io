@@ -13,6 +13,7 @@ main {
     margin: auto;
     max-width: 1200px;
     font-family: 'Poppins', sans-serif;
+    padding: var(--gap);
 }
 h1,h2,h3,h4{
     margin-top: 0;
